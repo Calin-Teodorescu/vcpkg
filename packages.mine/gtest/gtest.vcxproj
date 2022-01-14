@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Project">
+    <ProjectGuid>{CC2EC0AE-DE83-4C17-BB87-6F93D7250D0F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gtest</RootNamespace>
+    <ProjectName>gtest</ProjectName>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Build.props))\Build.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
+      <AdditionalOptions>/Qspectre</AdditionalOptions>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>UNICODE;_WINDOWS;_USRDLL;_NO_WASTORAGE_API;_NO_ASYNCRTIMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!--<PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">_DEBUG</PreprocessorDefinitions>-->
+      <RuntimeLibrary Condition="'$(Configuration)'=='Debug'">MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)'=='Release'">MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(NugetPath_Cosmos_SQLODConnector_Dependencies)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineArg.cpp" />
+    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.cpp" />
+    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestCommandLineParser.cpp" />
+    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineArg.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CompareUtils.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\Constants.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\DataUtils.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestCommandLineParser.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestUtils.h" />
+    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\ParquetUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <QCustomInput Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Connector\CosmosDB\Cosmos\*" />
+  </ItemGroup>
+</Project>
