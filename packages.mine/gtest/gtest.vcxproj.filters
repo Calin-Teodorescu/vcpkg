@@ -12,6 +12,21 @@
     <Filter Include="%2a%2a%2a Header Files\gtest">
       <UniqueIdentifier>{cb846422-489d-4818-b1e1-bcb6e3885eea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="%2a%2a%2a Header Files\gmock">
+      <UniqueIdentifier>{535b6020-9368-4481-ad56-ad90707b3d3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%2a%2a%2a Header Files\gmock\internal">
+      <UniqueIdentifier>{a85576ab-2419-4660-9086-40d7f2dc3634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%2a%2a%2a Header Files\gmock\internal\custom">
+      <UniqueIdentifier>{eb7f68ea-652a-4bf0-9c46-7c98b2e49155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%2a%2a%2a Header Files\gtest\internal">
+      <UniqueIdentifier>{36dea7c2-8240-48ee-b224-2b5355625c93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%2a%2a%2a Header Files\gtest\internal\custom">
+      <UniqueIdentifier>{4bd95383-7ff8-47e5-9dea-7afe6ab88f49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -22,6 +37,126 @@
     </ClInclude>
     <ClInclude Include="src\gtest-internal-inl.h">
       <Filter>%2a%2a%2a Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\internal\custom\gmock-generated-actions.h">
+      <Filter>%2a%2a%2a Header Files\gmock\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\internal\custom\gmock-matchers.h">
+      <Filter>%2a%2a%2a Header Files\gmock\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\internal\custom\gmock-port.h">
+      <Filter>%2a%2a%2a Header Files\gmock\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\internal\gmock-internal-utils.h">
+      <Filter>%2a%2a%2a Header Files\gmock\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\internal\gmock-port.h">
+      <Filter>%2a%2a%2a Header Files\gmock\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\internal\gmock-pp.h">
+      <Filter>%2a%2a%2a Header Files\gmock\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-actions.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-cardinalities.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-function-mocker.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-generated-actions.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-generated-function-mockers.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-generated-matchers.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-matchers.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-more-actions.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-more-matchers.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-nice-strict.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gmock\gmock-spec-builders.h">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\custom\gtest.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\custom\gtest-port.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\custom\gtest-printers.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal\custom</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-death-test-internal.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-filepath.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-internal.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-param-util.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-port.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-port-arch.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-string.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\internal\gtest-type-util.h">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest_pred_impl.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest_prod.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-death-test.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-matchers.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-message.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-param-test.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-printers.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-spi.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-test-part.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gtest\gtest-typed-test.h">
+      <Filter>%2a%2a%2a Header Files\gtest</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -61,5 +196,28 @@
     <ClCompile Include="src\gtest-typed-test.cc">
       <Filter>%2a%2a%2a Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\gmock\internal\custom\gmock-generated-actions.h.pump">
+      <Filter>%2a%2a%2a Header Files\gmock\internal\custom</Filter>
+    </None>
+    <None Include="include\gmock\internal\custom\README.md">
+      <Filter>%2a%2a%2a Header Files\gmock\internal\custom</Filter>
+    </None>
+    <None Include="include\gmock\gmock-generated-actions.h.pump">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </None>
+    <None Include="include\gmock\gmock-generated-function-mockers.h.pump">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </None>
+    <None Include="include\gmock\gmock-generated-matchers.h.pump">
+      <Filter>%2a%2a%2a Header Files\gmock</Filter>
+    </None>
+    <None Include="include\gtest\internal\custom\README.md">
+      <Filter>%2a%2a%2a Header Files\gtest\internal\custom</Filter>
+    </None>
+    <None Include="include\gtest\internal\gtest-type-util.h.pump">
+      <Filter>%2a%2a%2a Header Files\gtest\internal</Filter>
+    </None>
   </ItemGroup>
 </Project>
