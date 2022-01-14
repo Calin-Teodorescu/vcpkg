@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Project">
-    <ProjectGuid>{CC2EC0AE-DE83-4C17-BB87-6F93D7250D0F}</ProjectGuid>
+    <ProjectGuid>{AF973D50-CC46-42DB-BE20-E2F2AE495069}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>gtest</RootNamespace>
     <ProjectName>gtest</ProjectName>
@@ -70,12 +70,6 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineArg.cpp" />
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.cpp" />
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestCommandLineParser.cpp" />
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestUtils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineArg.h" />
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.h" />
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CompareUtils.h" />
@@ -84,9 +78,6 @@
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestCommandLineParser.h" />
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestUtils.h" />
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\ParquetUtils.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ItemGroup>

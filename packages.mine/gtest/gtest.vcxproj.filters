@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineArg.cpp" />
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.cpp" />
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestCommandLineParser.cpp" />
-    <ClCompile Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestUtils.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.h">
       <Filter>%2a%2a%2a Header Files</Filter>
     </ClInclude>
@@ -39,10 +33,5 @@
     <Filter Include="%2a Env">
       <UniqueIdentifier>{cb21603d-cf65-49c0-9101-b97fab90567e}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config">
-      <Filter>%2a Env</Filter>
-    </None>
   </ItemGroup>
 </Project>
