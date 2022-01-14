@@ -41,6 +41,8 @@
 // or void PrintTo(const Foo&, ::std::ostream*) in the namespace that
 // defines Foo.
 
+#include "pch.h"
+
 #include "gtest/gtest-printers.h"
 #include <stdio.h>
 #include <cctype>

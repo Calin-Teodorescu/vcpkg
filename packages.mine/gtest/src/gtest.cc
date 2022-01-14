@@ -30,6 +30,8 @@
 //
 // The Google C++ Testing and Mocking Framework (Google Test)
 
+#include "pch.h"
+
 #include "gtest/gtest.h"
 #include "gtest/internal/custom/gtest.h"
 #include "gtest/gtest-spi.h"

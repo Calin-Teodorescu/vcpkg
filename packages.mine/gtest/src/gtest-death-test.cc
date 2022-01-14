@@ -30,6 +30,8 @@
 //
 // This file implements death tests.
 
+#include "pch.h"
+
 #include "gtest/gtest-death-test.h"
 
 #include <utility>
