@@ -26,7 +26,7 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), Build.props))\Build.props" />
+  <Import Project="$(ENLISTMENT_ROOT)\Build.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -66,71 +66,71 @@
       <!--<PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">_DEBUG</PreprocessorDefinitions>-->
       <RuntimeLibrary Condition="'$(Configuration)'=='Debug'">MultiThreadedDebug</RuntimeLibrary>
       <RuntimeLibrary Condition="'$(Configuration)'=='Release'">MultiThreaded</RuntimeLibrary>
-      <AdditionalIncludeDirectories>$(NugetPath_Cosmos_SQLODConnector_Dependencies)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ItemGroup>
-    <QCustomInput Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Connector\CosmosDB\Cosmos\*" />
+    <ClCompile Include="src\gtest-all.cc" />
+    <ClCompile Include="src\gtest-death-test.cc" />
+    <ClCompile Include="src\gtest-filepath.cc" />
+    <ClCompile Include="src\gtest-matchers.cc" />
+    <ClCompile Include="src\gtest-port.cc" />
+    <ClCompile Include="src\gtest-printers.cc" />
+    <ClCompile Include="src\gtest-test-part.cc" />
+    <ClCompile Include="src\gtest-typed-test.cc" />
+    <ClCompile Include="src\gtest.cc" />
+    <ClCompile Include="src\gtest_main.cc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\gmock\gmock-actions.h" />
-    <None Include="include\gmock\gmock-cardinalities.h" />
-    <None Include="include\gmock\gmock-function-mocker.h" />
-    <None Include="include\gmock\gmock-generated-actions.h" />
-    <None Include="include\gmock\gmock-generated-actions.h.pump" />
-    <None Include="include\gmock\gmock-generated-function-mockers.h" />
-    <None Include="include\gmock\gmock-generated-function-mockers.h.pump" />
-    <None Include="include\gmock\gmock-generated-matchers.h" />
-    <None Include="include\gmock\gmock-generated-matchers.h.pump" />
-    <None Include="include\gmock\gmock-matchers.h" />
-    <None Include="include\gmock\gmock-more-actions.h" />
-    <None Include="include\gmock\gmock-more-matchers.h" />
-    <None Include="include\gmock\gmock-nice-strict.h" />
-    <None Include="include\gmock\gmock-spec-builders.h" />
-    <None Include="include\gmock\gmock.h" />
-    <None Include="include\gmock\internal\custom\gmock-generated-actions.h" />
-    <None Include="include\gmock\internal\custom\gmock-generated-actions.h.pump" />
-    <None Include="include\gmock\internal\custom\gmock-matchers.h" />
-    <None Include="include\gmock\internal\custom\gmock-port.h" />
-    <None Include="include\gmock\internal\custom\README.md" />
-    <None Include="include\gmock\internal\gmock-internal-utils.h" />
-    <None Include="include\gmock\internal\gmock-port.h" />
-    <None Include="include\gmock\internal\gmock-pp.h" />
-    <None Include="include\gtest\gtest-death-test.h" />
-    <None Include="include\gtest\gtest-matchers.h" />
-    <None Include="include\gtest\gtest-message.h" />
-    <None Include="include\gtest\gtest-param-test.h" />
-    <None Include="include\gtest\gtest-printers.h" />
-    <None Include="include\gtest\gtest-spi.h" />
-    <None Include="include\gtest\gtest-test-part.h" />
-    <None Include="include\gtest\gtest-typed-test.h" />
-    <None Include="include\gtest\gtest.h" />
-    <None Include="include\gtest\gtest_pred_impl.h" />
-    <None Include="include\gtest\gtest_prod.h" />
-    <None Include="include\gtest\internal\custom\gtest-port.h" />
-    <None Include="include\gtest\internal\custom\gtest-printers.h" />
-    <None Include="include\gtest\internal\custom\gtest.h" />
-    <None Include="include\gtest\internal\custom\README.md" />
-    <None Include="include\gtest\internal\gtest-death-test-internal.h" />
-    <None Include="include\gtest\internal\gtest-filepath.h" />
-    <None Include="include\gtest\internal\gtest-internal.h" />
-    <None Include="include\gtest\internal\gtest-param-util.h" />
-    <None Include="include\gtest\internal\gtest-port-arch.h" />
-    <None Include="include\gtest\internal\gtest-port.h" />
-    <None Include="include\gtest\internal\gtest-string.h" />
-    <None Include="include\gtest\internal\gtest-type-util.h" />
-    <None Include="include\gtest\internal\gtest-type-util.h.pump" />
-    <None Include="src\gtest-all.cc" />
-    <None Include="src\gtest-death-test.cc" />
-    <None Include="src\gtest-filepath.cc" />
-    <None Include="src\gtest-internal-inl.h" />
-    <None Include="src\gtest-matchers.cc" />
-    <None Include="src\gtest-port.cc" />
-    <None Include="src\gtest-printers.cc" />
-    <None Include="src\gtest-test-part.cc" />
-    <None Include="src\gtest-typed-test.cc" />
-    <None Include="src\gtest.cc" />
-    <None Include="src\gtest_main.cc" />
+    <ClInclude Include="include\gmock\gmock-actions.h" />
+    <ClInclude Include="include\gmock\gmock-cardinalities.h" />
+    <ClInclude Include="include\gmock\gmock-function-mocker.h" />
+    <ClInclude Include="include\gmock\gmock-generated-actions.h" />
+    <ClInclude Include="include\gmock\gmock-generated-actions.h.pump" />
+    <ClInclude Include="include\gmock\gmock-generated-function-mockers.h" />
+    <ClInclude Include="include\gmock\gmock-generated-function-mockers.h.pump" />
+    <ClInclude Include="include\gmock\gmock-generated-matchers.h" />
+    <ClInclude Include="include\gmock\gmock-generated-matchers.h.pump" />
+    <ClInclude Include="include\gmock\gmock-matchers.h" />
+    <ClInclude Include="include\gmock\gmock-more-actions.h" />
+    <ClInclude Include="include\gmock\gmock-more-matchers.h" />
+    <ClInclude Include="include\gmock\gmock-nice-strict.h" />
+    <ClInclude Include="include\gmock\gmock-spec-builders.h" />
+    <ClInclude Include="include\gmock\gmock.h" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-generated-actions.h" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-generated-actions.h.pump" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-matchers.h" />
+    <ClInclude Include="include\gmock\internal\custom\gmock-port.h" />
+    <ClInclude Include="include\gmock\internal\custom\README.md" />
+    <ClInclude Include="include\gmock\internal\gmock-internal-utils.h" />
+    <ClInclude Include="include\gmock\internal\gmock-port.h" />
+    <ClInclude Include="include\gmock\internal\gmock-pp.h" />
+    <ClInclude Include="include\gtest\gtest-death-test.h" />
+    <ClInclude Include="include\gtest\gtest-matchers.h" />
+    <ClInclude Include="include\gtest\gtest-message.h" />
+    <ClInclude Include="include\gtest\gtest-param-test.h" />
+    <ClInclude Include="include\gtest\gtest-printers.h" />
+    <ClInclude Include="include\gtest\gtest-spi.h" />
+    <ClInclude Include="include\gtest\gtest-test-part.h" />
+    <ClInclude Include="include\gtest\gtest-typed-test.h" />
+    <ClInclude Include="include\gtest\gtest.h" />
+    <ClInclude Include="include\gtest\gtest_pred_impl.h" />
+    <ClInclude Include="include\gtest\gtest_prod.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest-port.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest-printers.h" />
+    <ClInclude Include="include\gtest\internal\custom\gtest.h" />
+    <ClInclude Include="include\gtest\internal\custom\README.md" />
+    <ClInclude Include="include\gtest\internal\gtest-death-test-internal.h" />
+    <ClInclude Include="include\gtest\internal\gtest-filepath.h" />
+    <ClInclude Include="include\gtest\internal\gtest-internal.h" />
+    <ClInclude Include="include\gtest\internal\gtest-param-util.h" />
+    <ClInclude Include="include\gtest\internal\gtest-port-arch.h" />
+    <ClInclude Include="include\gtest\internal\gtest-port.h" />
+    <ClInclude Include="include\gtest\internal\gtest-string.h" />
+    <ClInclude Include="include\gtest\internal\gtest-type-util.h" />
+    <ClInclude Include="include\gtest\internal\gtest-type-util.h.pump" />
+    <ClInclude Include="src\gtest-internal-inl.h" />
   </ItemGroup>
 </Project>
