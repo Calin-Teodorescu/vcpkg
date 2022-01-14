@@ -69,16 +69,6 @@
       <AdditionalIncludeDirectories>$(NugetPath_Cosmos_SQLODConnector_Dependencies)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineArg.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CommandLineParser.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\CompareUtils.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\Constants.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\DataUtils.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestCommandLineParser.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\TestUtils.h" />
-    <ClInclude Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Utilities\ParquetUtils.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ItemGroup>
     <QCustomInput Include="$(DocDBRoot)\Cosmos\SynapseLink\SQLServerlessConnector\Connector\CosmosDB\Cosmos\*" />
