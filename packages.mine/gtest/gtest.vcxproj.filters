@@ -160,9 +160,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gtest.cpp">
-      <Filter>%2a%2a%2a Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>%2a%2a%2a Source Files</Filter>
     </ClCompile>
